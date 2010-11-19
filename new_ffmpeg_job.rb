@@ -3,7 +3,7 @@
 require "rubygems"
 require "resque"
 
-require "worker/ffmpeg_converter"
+require "workers/ffmpeg_converter"
 
 template = ARGV.shift
 files = ARGV
