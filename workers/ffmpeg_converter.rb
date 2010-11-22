@@ -8,15 +8,15 @@ class FFmpegConverter
 		},
 		"default720p2ch" => {
 			:options1 => "-vcodec libx264 -vpre default -crf 20 -r 25 -threads 0 -s hd720 -sws_flags lanczos -acodec copy",
-			:options 2 => "-acodec copy -newaudio"
+			:options2 => "-acodec copy -newaudio"
 		},
 		"hq720p2ch" => {
 			:options1 => "-vcodec libx264 -vpre hq -crf 18 -r 25 -threads 0 -s hd720 -sws_flags lanczos -acodec copy",
-			:options 2 => "-acodec copy -newaudio"
+			:options2 => "-acodec copy -newaudio"
 		},
 		"max720p2ch" => {
 			:options1 => "-vcodec libx264 -vpre max -crf 15 -r 25 -threads 0 -s hd720 -sws_flags lanczos -acodec copy",
-			:options 2 => "-acodec copy -newaudio"
+			:options2 => "-acodec copy -newaudio"
 		}
 
 	}
