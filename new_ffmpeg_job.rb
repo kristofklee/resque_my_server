@@ -4,8 +4,9 @@ require "rubygems"
 require "resque"
 
 #require "workers/ffmpeg_converter"
+
 class FFmpegConverter
-	@queue = :ffmpeg	
+	@queue = ARGV.shift.to_sym	
 end
 
 template = ARGV.shift

@@ -6,6 +6,10 @@ class FFmpegConverter
 			:options1 => "-vcodec libx264 -vpre normal -crf 20 -r 25 -threads 0 -s hd720 -sws_flags lanczos -acodec copy",
 			:options2 => "-acodec copy -newaudio"
 		},
+		"normal720p2ch" => {
+			:options1 => "-vcodec libx264 -vpre normal -crf 20 -r 25 -threads 0 -s hd720 -sws_flags lanczos -acodec copy",
+			:options2 => "-acodec copy -newaudio"
+		},
 		"default720p2ch" => {
 			:options1 => "-vcodec libx264 -vpre default -crf 20 -r 25 -threads 0 -s hd720 -sws_flags lanczos -acodec copy",
 			:options2 => "-acodec copy -newaudio"
@@ -17,8 +21,11 @@ class FFmpegConverter
 		"max720p2ch" => {
 			:options1 => "-vcodec libx264 -vpre max -crf 15 -r 25 -threads 0 -s hd720 -sws_flags lanczos -acodec copy",
 			:options2 => "-acodec copy -newaudio"
+		},
+		"normal3ch" => {
+			:options1 => "-vcodec libx264 -vpre normal -crf 20 -r 25 -threads 0 -acodec copy",
+			:options2 => "-acodec copy -newaudio -acodec copy -newaudio"
 		}
-
 	}
 
 	def self.perform( template, file )
